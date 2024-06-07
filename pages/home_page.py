@@ -6,6 +6,7 @@ from pages.abstract_base_page import AbstractBasePage
 from selenium.webdriver.support import expected_conditions as EC
 
 from pages.edit_page import EditPage
+from pages.email_page import EmailPage
 
 
 class HomePage(AbstractBasePage):
@@ -21,7 +22,7 @@ class HomePage(AbstractBasePage):
         self.wait.until(EC.visibility_of_element_located(self.header_h1))
         actual_header = self.driver.find_element(*self.header_h1).text
         assert (
-            expected_header in actual_header
+                expected_header in actual_header
         ), f"Expected header to be '{expected_header}' but found '{actual_header}'"
 
     def click_edit_on(self, user: User):
@@ -29,10 +30,16 @@ class HomePage(AbstractBasePage):
         edit_button = row_with_my_user.find_element(By.CLASS_NAME, "edit")
         edit_button.click()
         return EditPage(self.driver)
-    
+
+    def click_email_on(self, user: User):
+        row_with_my_user = self._find_row_with_user(user)
+        edit_button = row_with_my_user.find_element(By.CLASS_NAME, "email")
+        edit_button.click()
+        return EmailPage(self.driver)
+
     def get_alert(self):
         return AlertComponent(self.driver)
-    
+
     def verify_user_displayed(self, user: User):
         try:
             self._find_row_with_user(user)
@@ -45,7 +52,7 @@ class HomePage(AbstractBasePage):
             self._find_row_with_user(user)
             assert False, f"User {user.firstName} {user.lastName} should not be displayed but is."
         except ValueError:
-            pass # expected
+            pass  # expected
         return self
 
     def _find_row_with_user(self, user: User):
