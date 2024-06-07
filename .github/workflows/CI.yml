@@ -46,7 +46,7 @@ jobs:
           ADMIN_USERNAME: "admin"
           ADMIN_PASSWORD: "admin"
           BACKEND_URL: "http://localhost:4001"
-          MAIL_URL: "https://localhost:8025"
+          MAIL_URL: "http://localhost:8025"
           IS_HEADLESS: "true"
         run: pytest --alluredir=allure-results tests/
 
@@ -111,7 +111,7 @@ jobs:
           ADMIN_USERNAME: "admin"
           ADMIN_PASSWORD: "admin"
           BACKEND_URL: "http://localhost:4001"
-          MAIL_URL: "https://localhost:8025"
+          MAIL_URL: "http://localhost:8025"
           IS_HEADLESS: "true"
         run: pytest tests/ -n auto
 
@@ -150,6 +150,6 @@ jobs:
           ADMIN_USERNAME: "admin"
           ADMIN_PASSWORD: "admin"
           BACKEND_URL: "http://localhost:4001"
-          MAIL_URL: "https://localhost:8025"
+          MAIL_URL: "http://localhost:8025"
           IS_HEADLESS: "true"
         run: pytest tests/api/
