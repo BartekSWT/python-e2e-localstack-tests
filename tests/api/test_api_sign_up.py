@@ -1,10 +1,7 @@
-import random
 import pytest
-import os
 from api.post_sign_up import SignUp
 from dotenv import load_dotenv
 import requests
-from faker import Faker
 from generators import user_generator
 
 load_dotenv()
@@ -16,7 +13,6 @@ def sign_up_api():
 
 
 def test_successful_sign_up(sign_up_api: SignUp):
-    fake = Faker()
     user = user_generator.get_random_user()
     response = sign_up_api.api_call(user)
     try:

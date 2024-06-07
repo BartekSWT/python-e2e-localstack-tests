@@ -38,7 +38,7 @@ def test_sending_mail(home_page: HomePage, get_emails_api: GetMessages, new_user
     email_page = home_page.click_email_on(new_user)
     email_page.attempt_send_email(subject, message, EmailPage).get_alert().verify_alert_success(
         "Email was scheduled to be send")
-    time.sleep(5)  # gives time for mail to process through queue
+    time.sleep(10)  # gives time for mail to process through queue
     response = get_emails_api.api_call()
     try:
         response.raise_for_status()
