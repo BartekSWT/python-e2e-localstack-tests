@@ -1,0 +1,32 @@
+INFO     http.client:base_api.py:18 Making PUT request to URL: http://localhost:4001/users/wdudley
+INFO     http.client:base_api.py:20 Request Headers:
+{
+    "Authorization": "Bearer some_invalid_token"
+}
+INFO     http.client:base_api.py:24 Request JSON Body:
+{
+    "email": "newemail@example.com",
+    "firstName": "NewFirstName",
+    "lastName": "NewLastName",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+INFO     http.client:base_api.py:18 Making DELETE request to URL: http://localhost:4001/users/wdudley
+INFO     http.client:base_api.py:20 Request Headers:
+{
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3ZHVkbGV5IiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9LHsiYXV0aG9yaXR5IjoiUk9MRV9DTElFTlQifV0sImlhdCI6MTcxODA1OTM0OSwiZXhwIjoxNzE4MDU5NjQ5fQ.QNAEY2kjsnqGwRvENJnjOMN_cD6lI3VKcbVsvtkVob0"
+}
+INFO     http.client:base_api.py:35 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Date": "Mon, 10 Jun 2024 22:42:28 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}

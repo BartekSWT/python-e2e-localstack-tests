@@ -1,0 +1,23 @@
+INFO     http.client:base_api.py:18 Making GET request to URL: http://localhost:4001/users/me
+INFO     http.client:base_api.py:20 Request Headers:
+{
+    "Authorization": "Bearer some_invalid_token"
+}
+INFO     http.client:base_api.py:18 Making DELETE request to URL: http://localhost:4001/users/jilliankerr
+INFO     http.client:base_api.py:20 Request Headers:
+{
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqaWxsaWFua2VyciIsImF1dGgiOlt7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6IlJPTEVfQ0xJRU5UIn1dLCJpYXQiOjE3MTgwNTkzNTAsImV4cCI6MTcxODA1OTY1MH0.AKhMz_QgrE7mNk6HVIgpjIc9DyvszLMj930jGbPGXpU"
+}
+INFO     http.client:base_api.py:35 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Date": "Mon, 10 Jun 2024 22:42:29 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}

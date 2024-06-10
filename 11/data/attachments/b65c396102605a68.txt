@@ -1,0 +1,5 @@
+INFO     http.client:base_api.py:18 Making GET request to URL: http://localhost:4001/users/nonexistent_user
+INFO     http.client:base_api.py:20 Request Headers:
+{
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5cmlvcyIsImF1dGgiOlt7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6IlJPTEVfQ0xJRU5UIn1dLCJpYXQiOjE3MTgwNTkzNTAsImV4cCI6MTcxODA1OTY1MH0.N3EVbEcxUhZ3pfx0zRsvuQAJFk0QLqbhiCT1Jv0JhR8"
+}
